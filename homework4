@@ -1,0 +1,84 @@
+"""
+'遍历练习
+k=1
+for i in range(1,100):
+    if i%2==1:
+        print(i,end=" ")
+        if i<50:
+            k=k*i
+print("\n")
+print(k)
+
+'循环
+l = [1,2,3,4,5]
+size=len(l)
+def for_way(l):
+    for i in range(size-1,-1,-1):
+        print(l[i],end=" ")
+
+def whway(l):
+    size=5
+    while size>0:
+        print(l[size-1],end=" ")
+        size=size-1
+
+for_way(l)
+print("\n")
+whway(l)
+"""
+
+"""
+def Square_root_1():
+    c=2
+    i=0
+    g=0
+    for j in range(0,c+1):
+        if (j*j>c and g==0):
+            g = j-1
+        while(abs(g*g-c)>0.0001):
+            g += 0.0001
+            i = i+1
+            print("%d:g = %.5f"%(i,g))
+Square_root_()
+
+def Square_root_2():
+    i = 0
+    c = 2
+    m_max = c
+    m_min = 0
+    g = (m_min+m_max)/2
+    while(abs(g*g-c)>0.00000000001):
+        if(g*g<c):
+            m_min = g
+        else:
+            m_max = g
+        g = (m_min+m_max)/2
+        i = i+1
+        print("%d:g = %.13f" %(i,g))
+
+Square_root_2()
+
+def Square_root_3():
+    c = 2
+    g = c/2
+    i = 0
+    while(abs(g*g-c)>0.00000000001):
+        g = (g + c/g)/2
+        i = i+1
+        print("%d:%.13f"%(i,g))
+Square_root_3()
+
+
+import random
+import math
+S =1
+N = 1000000
+C = 0
+for i in range(N):
+    x = random.uniform(0.0,1.0)
+    y = random.uniform(0.0,1.0)
+    if y <= (math.pow(x,2)+math.pow(x,3)):
+        C += 1
+I = C/N*S
+print(I)
+"""
