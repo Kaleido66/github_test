@@ -1,0 +1,38 @@
+class Queue():
+    def __init__(self): #初始化
+        self.__items=[]
+    def size(self): #队内元素数量
+        return len(self.__items)
+    def isempty(self):  #是否为空
+        if len(self.__items)==0:
+            return True
+        else:
+            return False
+    def push(self,element): #入队
+        self.__items.append(element)
+    def pop(self):  #出队
+        try:
+            return self.__items.pop(0)
+        except:
+            print('ERROR:Stack is empty now!')
+    def peek(self): #取队首
+        try:
+            return self.__items[0]
+        except:
+            print('ERROR:Stack is empty now!')
+    def tail(self): #取队尾
+        try:
+            return self.__items[-1]
+        except:
+            print("ERROR:Stack is empty now!")
+
+s=Queue()
+s.push(1)
+print(s.pop())
+print(s.pop())
+print('************')
+s.push(3.5)
+s.push(2.7)
+print(s.peek())
+print(s.size())
+print(s.isempty())
